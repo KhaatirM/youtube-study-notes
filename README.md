@@ -41,8 +41,15 @@ This folder is its own git repo (separate from any git repo in your user home di
 .\scripts\push-to-github.ps1 -GitHubUser YOUR_GITHUB_USERNAME
 ```
 
-3. After the first push, enable Pages: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-4. Your privacy policy URL for the Chrome Web Store:
+3. Enable Pages (required once): open  
+   `https://github.com/YOUR_GITHUB_USERNAME/youtube-study-notes/settings/pages`  
+   - **Build and deployment → Source:** choose **Deploy from a branch**  
+   - **Branch:** `main` → folder **`/docs`** → **Save**  
+   - Wait 1–2 minutes for the site to deploy  
+
+   *(Alternative: Source = **GitHub Actions** if you prefer the workflow.)*
+
+4. Privacy policy URL for the Chrome Web Store:
 
 `https://YOUR_GITHUB_USERNAME.github.io/youtube-study-notes/privacy.html`
 
