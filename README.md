@@ -28,12 +28,30 @@ Chrome extension (Manifest V3) that turns YouTube transcripts into structured st
 4. Open a YouTube video with captions (CC)
 5. Click **Study Notes** (bottom-right) → **Generate notes**
 
+## GitHub
+
+This folder is its own git repo (separate from any git repo in your user home directory).
+
+### Push to GitHub (one-time)
+
+1. Create an empty repo: [github.com/new](https://github.com/new) → name it `youtube-study-notes` → **do not** add README or .gitignore.
+2. In PowerShell, from this folder:
+
+```powershell
+.\scripts\push-to-github.ps1 -GitHubUser YOUR_GITHUB_USERNAME
+```
+
+3. After the first push, enable Pages: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+4. Your privacy policy URL for the Chrome Web Store:
+
+`https://YOUR_GITHUB_USERNAME.github.io/youtube-study-notes/privacy.html`
+
 ## Publish to Chrome Web Store
 
 1. Zip the project (exclude `.git`, `scripts/`, dev files)
 2. Create a [Chrome Web Store developer account](https://chrome.google.com/webstore/devconsole) ($5 one-time)
 3. Upload the zip as a new item
-4. Use `privacy.html` hosted on GitHub Pages (or similar) as your privacy policy URL
+4. Use the GitHub Pages privacy URL above in the store listing
 5. Add screenshots (1280×800) and icons (already in `icons/`)
 
 ## Project structure
