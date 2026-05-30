@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Study Notes — Settings</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <main>
+    <h1>Settings</h1>
+    <p class="lead">API keys stay in your browser (chrome.storage.sync). Transcripts are sent only to the provider you choose.</p>
+
+    <section>
+      <h2>AI provider</h2>
+      <label class="radio-row">
+        <input type="radio" name="provider" value="openai" checked />
+        OpenAI
+      </label>
+      <label class="radio-row">
+        <input type="radio" name="provider" value="gemini" />
+        Google Gemini
+      </label>
+    </section>
+
+    <section id="openai-section">
+      <h2>OpenAI</h2>
+      <label>
+        API key
+        <input type="password" id="openaiApiKey" autocomplete="off" placeholder="sk-…" />
+      </label>
+      <label>
+        Model
+        <select id="openaiModel">
+          <option value="gpt-4o-mini">gpt-4o-mini (recommended)</option>
+          <option value="gpt-4o">gpt-4o</option>
+          <option value="gpt-4.1-mini">gpt-4.1-mini</option>
+        </select>
+      </label>
+      <p class="hint"><a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">Get an OpenAI API key</a></p>
+    </section>
+
+    <section id="gemini-section">
+      <h2>Google Gemini</h2>
+      <label>
+        API key
+        <input type="password" id="geminiApiKey" autocomplete="off" placeholder="AIza…" />
+      </label>
+      <label>
+        Model
+        <select id="geminiModel">
+          <option value="gemini-2.0-flash">gemini-2.0-flash (recommended)</option>
+          <option value="gemini-1.5-flash">gemini-1.5-flash</option>
+          <option value="gemini-1.5-pro">gemini-1.5-pro</option>
+        </select>
+      </label>
+      <p class="hint"><a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Get a Gemini API key</a></p>
+    </section>
+
+    <section>
+      <h2>Defaults</h2>
+      <label>
+        Default note style
+        <select id="noteMode">
+          <option value="detailed">Detailed study notes</option>
+          <option value="quick">Quick summary</option>
+          <option value="cornell">Cornell notes</option>
+          <option value="exam">Exam cram</option>
+        </select>
+      </label>
+      <label>
+        Preferred caption language
+        <input type="text" id="language" placeholder="en" maxlength="10" />
+      </label>
+    </section>
+
+    <div class="actions">
+      <button type="button" id="save" class="btn-primary">Save settings</button>
+      <span id="status" role="status"></span>
+    </div>
+
+    <section class="privacy">
+      <h2>Privacy</h2>
+      <p>Notes are stored locally on your device. We do not run a backend server.</p>
+      <p><a href="../privacy.html" target="_blank">Privacy policy</a></p>
+    </section>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

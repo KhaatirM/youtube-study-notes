@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", sans-serif;
+  font-size: 14px;
+  background: #0f0f0f;
+  color: #f1f1f1;
+  min-width: 420px;
+}
+
+main {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 28px 24px 40px;
+}
+
+h1 {
+  font-size: 22px;
+  margin: 0 0 8px;
+}
+
+.lead {
+  color: #aaa;
+  line-height: 1.5;
+  margin: 0 0 24px;
+}
+
+section {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+section h2 {
+  font-size: 15px;
+  margin: 0 0 14px;
+  color: #3ea6ff;
+}
+
+label {
+  display: block;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+label input,
+label select {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #f1f1f1;
+  font-size: 14px;
+}
+
+.radio-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.radio-row input {
+  width: auto;
+  margin: 0;
+}
+
+.hint {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+.hint a {
+  color: #3ea6ff;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-primary {
+  padding: 12px 20px;
+  background: #3ea6ff;
+  color: #0f0f0f;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#status {
+  font-size: 13px;
+  color: #2ba640;
+}
+
+.privacy p {
+  color: #aaa;
+  line-height: 1.5;
+}
+
+.privacy a {
+  color: #3ea6ff;
+}
