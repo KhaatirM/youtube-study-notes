@@ -12,29 +12,41 @@
 </head>
 <body>
   <h1>Privacy Policy — YouTube Study Notes</h1>
-  <p><em>Last updated: May 30, 2026</em></p>
+  <p><em>Last updated: June 12, 2026</em></p>
 
   <h2>Overview</h2>
-  <p>YouTube Study Notes is a browser extension that helps you create study notes from YouTube video captions. We do not operate a backend server for note generation.</p>
+  <p>YouTube Study Notes is a browser extension that helps you create study notes from YouTube video captions. <strong>We do not operate a backend server.</strong> All note generation runs in your browser or on your computer (Ollama).</p>
 
-  <h2>Data we process</h2>
+  <h2>Data processed on your device</h2>
   <ul>
-    <li><strong>Video metadata</strong> (title, channel, video ID) from pages you open on YouTube.</li>
+    <li><strong>Video metadata</strong> (title, channel, video ID) from YouTube pages you open.</li>
     <li><strong>Transcripts</strong> from YouTube’s public caption tracks when you generate notes.</li>
-    <li><strong>API keys</strong> you enter in Settings, stored in Chrome sync/local storage on your device.</li>
-    <li><strong>Generated notes</strong> saved locally in your browser unless you export them.</li>
+    <li><strong>API keys</strong> you optionally enter (OpenAI/Gemini), stored in Chrome sync/local storage.</li>
+    <li><strong>Generated notes</strong>, tags, and library history stored locally unless you export them.</li>
+    <li><strong>Settings</strong> (provider, language, theme) stored in Chrome sync.</li>
   </ul>
 
-  <h2>Third-party services</h2>
-  <p>When you generate notes, transcript text is sent directly from your browser to the AI provider you select (OpenAI or Google Gemini), using your own API key. We do not receive or store that data on our servers.</p>
+  <h2>Third-party and local AI services</h2>
+  <ul>
+    <li><strong>Ollama (default, free):</strong> If you choose Ollama, transcript text is sent only to <code>http://localhost</code> or <code>127.0.0.1</code> on <strong>your own computer</strong>. No data is sent to us or to Ollama’s cloud.</li>
+    <li><strong>OpenAI / Google Gemini (optional):</strong> If you add your own API key, transcript text is sent directly from your browser to that provider. We do not receive or store that data.</li>
+  </ul>
 
   <h2>What we do not collect</h2>
-  <p>We do not collect account information, analytics, or personal identifiers. We do not sell data.</p>
+  <p>We do not collect account information, analytics, advertising identifiers, or personal data on our servers. We do not sell data.</p>
 
-  <h2>Permissions</h2>
-  <p>The extension requests access to youtube.com to read captions and show the notes panel, and to OpenAI/Gemini APIs only when you generate notes.</p>
+  <h2>Why the extension needs permissions</h2>
+  <ul>
+    <li><strong>youtube.com</strong> — Show the notes panel and read public captions on videos you watch.</li>
+    <li><strong>storage</strong> — Save your notes library and settings on your device.</li>
+    <li><strong>scripting</strong> — Inject the notes panel if it is not already loaded on a tab you open.</li>
+    <li><strong>downloads</strong> — Export notes as Markdown, PDF, CSV, or backup JSON when you choose.</li>
+    <li><strong>declarativeNetRequest</strong> — Adjust request headers so local Ollama can respond to the extension (CORS).</li>
+    <li><strong>localhost / 127.0.0.1</strong> — Connect only to Ollama running on your machine; not used for remote tracking.</li>
+    <li><strong>OpenAI / Gemini hosts</strong> — Only when you configure cloud AI and generate notes.</li>
+  </ul>
 
   <h2>Contact</h2>
-  <p>For questions about this policy, contact the developer via the Chrome Web Store listing support link.</p>
+  <p>Questions: use the support link on the Chrome Web Store listing for this extension.</p>
 </body>
 </html>

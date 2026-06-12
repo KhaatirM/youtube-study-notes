@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Store screenshot mockup — Notes history</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      width: 1280px;
+      height: 800px;
+      font-family: Roboto, "Segoe UI", sans-serif;
+      background: #0f0f0f;
+      color: #f1f1f1;
+      overflow: hidden;
+    }
+    .layout { display: flex; height: 100%; }
+    .video {
+      flex: 1;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f0f 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #666;
+    }
+    .panel {
+      width: 400px;
+      background: #1a1a1a;
+      border-left: 1px solid #2a2a2a;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      padding: 14px 16px;
+      border-bottom: 1px solid #2a2a2a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header h2 { margin: 0; font-size: 16px; }
+    .link { color: #3ea6ff; font-size: 12px; font-weight: 600; }
+    .body { padding: 16px; flex: 1; }
+    .search {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #2a2a2a;
+      background: #0f0f0f;
+      color: #aaa;
+      margin-bottom: 12px;
+    }
+    .item {
+      background: #0f0f0f;
+      border: 1px solid #2a2a2a;
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+    }
+    .item.highlight { border-color: #3ea6ff; }
+    .title { font-weight: 600; font-size: 13px; }
+    .channel { font-size: 12px; color: #aaa; }
+    .meta { font-size: 11px; color: #888; margin-top: 4px; }
+    .caption {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: rgba(0,0,0,0.75);
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <div class="video">YouTube video area</div>
+    <aside class="panel">
+      <div class="header">
+        <h2>Study Notes</h2>
+        <span class="link">Back to notes</span>
+      </div>
+      <div class="body">
+        <p style="font-size:12px;color:#aaa;margin:0 0 12px">All saved notes on this device.</p>
+        <input class="search" placeholder="Search title or channel…" readonly />
+        <div class="item highlight">
+          <div class="title">Introduction to Machine Learning</div>
+          <div class="channel">MIT OpenCourseWare</div>
+          <div class="meta">Detailed · Mar 15, 2:30 PM</div>
+        </div>
+        <div class="item">
+          <div class="title">WD Mohammed Islamic Center</div>
+          <div class="channel">Community Channel</div>
+          <div class="meta">Quick summary · Mar 14, 9:12 PM</div>
+        </div>
+        <div class="item">
+          <div class="title">Organic Chemistry — Alkenes</div>
+          <div class="channel">Professor Dave</div>
+          <div class="meta">Flashcards &amp; quiz · Mar 12, 4:05 PM</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <p class="caption">Screenshot template: export at 1280×800 for Chrome Web Store (Notes history view)</p>
+</body>
+</html>

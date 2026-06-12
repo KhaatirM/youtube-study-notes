@@ -11,13 +11,15 @@
     <h1>Study Notes</h1>
     <a href="#" id="open-options">Settings</a>
   </header>
-  <p class="hint">Open any YouTube video and click <strong>Study Notes</strong> on the page.</p>
-  <button type="button" id="open-panel" class="btn-primary">Open on current tab</button>
-  <section>
-    <h2>Recent notes</h2>
-    <ul id="library"></ul>
-    <p id="empty" class="empty">No saved notes yet.</p>
-  </section>
+  <div class="popup-body">
+    <p class="hint">On a YouTube video: <strong>Open panel</strong>, press <strong>Alt+S</strong>, or use the floating <strong>Study Notes</strong> button.</p>
+    <button type="button" id="open-panel" class="btn-primary">Open on current tab</button>
+    <section>
+      <h2>Recent notes</h2>
+      <ul id="library"></ul>
+      <p id="empty" class="empty">No saved notes yet.</p>
+    </section>
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>

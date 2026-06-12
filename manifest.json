@@ -1,14 +1,16 @@
 {
   "manifest_version": 3,
   "name": "YouTube Study Notes",
-  "version": "1.0.0",
-  "description": "Generate structured study notes from YouTube transcripts. Export to Markdown or PDF.",
-  "permissions": ["storage", "activeTab", "downloads"],
+  "version": "1.2.0",
+  "description": "AI study notes from YouTube transcripts. Free with Ollama. Export Markdown/PDF, flashcards, and history.",
+  "permissions": ["storage", "activeTab", "downloads", "scripting", "declarativeNetRequestWithHostAccess"],
   "host_permissions": [
     "https://www.youtube.com/*",
     "https://youtube.com/*",
     "https://api.openai.com/*",
-    "https://generativelanguage.googleapis.com/*"
+    "https://generativelanguage.googleapis.com/*",
+    "http://localhost:11434/*",
+    "http://127.0.0.1:11434/*"
   ],
   "background": {
     "service_worker": "background.js",
@@ -28,15 +30,24 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
+  "commands": {
+    "toggle-panel": {
+      "suggested_key": {
+        "default": "Alt+S",
+        "mac": "Alt+S"
+      },
+      "description": "Open Study Notes panel"
+    }
+  },
   "content_scripts": [
     {
       "matches": [
-        "https://www.youtube.com/watch*",
-        "https://youtube.com/watch*"
+        "https://www.youtube.com/*",
+        "https://youtube.com/*"
       ],
-      "js": ["content/content.js"],
+      "js": ["content/transcript-fetch.js", "content/content.js", "content/features.js"],
       "css": ["content/content.css"],
       "run_at": "document_idle"
     }
-  ],
+  ]
 }
